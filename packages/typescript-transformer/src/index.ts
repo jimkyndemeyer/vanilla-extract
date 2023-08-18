@@ -14,7 +14,6 @@ const buildSetFileScopeESMStatements = (
 ): ts.Statement[] => [
   factory.createImportDeclaration(
     undefined,
-    undefined,
     factory.createImportClause(
       false,
       undefined,
@@ -272,7 +271,7 @@ const transformer = (
     };
 
     const statementsWithDebugIdent = sourceFile.statements.map((statement) =>
-      ts.visitNode(statement, addDebugIdentVisitor),
+      ts.visitNode(statement, addDebugIdentVisitor) as ts.Statement,
     );
 
     return context.factory.updateSourceFile(sourceFile, [

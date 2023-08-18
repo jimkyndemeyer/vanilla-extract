@@ -1,9 +1,12 @@
 {
   "name": "@vanilla-extract/typescript-transformer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Zero-runtime Stylesheets-in-TypeScript",
   "main": "dist/vanilla-extract-typescript-transformer.cjs.js",
   "module": "dist/vanilla-extract-typescript-transformer.esm.js",
+  "scripts": {
+    "pack": "yarn pack --filename vanilla-extract-typescript-transformer-0.2.0.tgz"
+  },
   "preconstruct": {
     "entrypoints": [
       "index.ts"
@@ -23,9 +26,9 @@
     "@vanilla-extract/integration": "^1.0.0"
   },
   "devDependencies": {
-    "typescript": "^4.1.3"
+    "typescript": "^5.1.6"
   },
   "peerDependencies": {
-    "typescript": ">=4.1.3"
+    "typescript": ">=5.1.6"
   }
 }
